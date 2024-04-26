@@ -15,11 +15,46 @@
       text-overflow: ellipsis;
       display: -webkit-box;
     }
-  </style>
+
+    .container {
+      width: 20%;
+      flex: 0 1 334px;
+    }
+
+    .truncated-text-container {
+      overflow: hidden;
+      display: inline-block;
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    .truncated-text-container .truncated-text {
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .truncated-text-container .truncated-text.multiple {
+      white-space: normal;
+    }
+
+    .truncated-text-container .truncated-text.multiple.two-lines {
+     display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    }
+    </style>
 </head>
 <body>
-  <h2>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum121313211111111111
-    Lorem1232222222222222222222 ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-  </h2>
+  <div class="container">
+    <div class="truncated-text-container">
+      <div class="truncated-text multiple two-lines">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum121313211111111111
+        Lorem1232222222222222222222 ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+      </div >
+    </div>
+  </div>
+  
+ 
 </body>
 </html>
